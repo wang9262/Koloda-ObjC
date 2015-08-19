@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="acY-mD-tCq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="F3s-TB-RSU">
+            <objects>
+                <viewController id="acY-mD-tCq" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aZ-os-gfj"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Jy-MP-IeM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YOf-yZ-ZAl">
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8T-pj-jZx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe2-Po-F6Z">
+                                        <rect key="frame" x="15" y="33" width="19" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="19" id="a1P-av-s4E"/>
+                                            <constraint firstAttribute="height" constant="22" id="r3W-7P-3Xo"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_card_from_bg">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bI0-L6-qOM">
+                                        <rect key="frame" x="284" y="33" width="21" height="22"/>
+                                        <state key="normal" image="btn_undo">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="revertAction:" destination="acY-mD-tCq" eventType="touchUpInside" id="72W-bP-sR9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="8Jb-rf-pc5"/>
+                                    <constraint firstItem="bI0-L6-qOM" firstAttribute="top" secondItem="D8T-pj-jZx" secondAttribute="top" constant="33" id="E4A-30-TkS"/>
+                                    <constraint firstItem="Oe2-Po-F6Z" firstAttribute="leading" secondItem="D8T-pj-jZx" secondAttribute="leading" constant="15" id="OBN-pu-o8Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="bI0-L6-qOM" secondAttribute="trailing" constant="15" id="lFh-P3-dR5"/>
+                                    <constraint firstItem="Oe2-Po-F6Z" firstAttribute="top" secondItem="D8T-pj-jZx" secondAttribute="top" constant="33" id="tig-s1-1QO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9it-j2-1a6">
+                                <rect key="frame" x="100" y="408" width="120" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tP-07-Kan">
+                                        <rect key="frame" x="88" y="0.0" width="32" height="32"/>
+                                        <state key="normal" image="btn_like_normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="btn_like_pressed"/>
+                                        <connections>
+                                            <action selector="likeAction:" destination="acY-mD-tCq" eventType="touchUpInside" id="cx9-XI-iJz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfq-df-kSg">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <state key="normal" image="btn_skip_normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="btn_skip_pressed"/>
+                                        <connections>
+                                            <action selector="ignoreAction:" destination="acY-mD-tCq" eventType="touchUpInside" id="N17-we-ElH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Y15-G9-3ZP"/>
+                                    <constraint firstAttribute="width" constant="120" id="c3L-cx-So5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSJ-V4-0AD" customClass="SwipeView">
+                                <rect key="frame" x="18" y="64" width="284" height="320"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CSJ-V4-0AD" secondAttribute="height" multiplier="71:80" id="pgP-KQ-myu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.1529411765" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="D8T-pj-jZx" firstAttribute="leading" secondItem="YOf-yZ-ZAl" secondAttribute="leading" id="0SA-9L-dfP"/>
+                            <constraint firstItem="CSJ-V4-0AD" firstAttribute="top" secondItem="D8T-pj-jZx" secondAttribute="bottom" id="1KX-CR-Ezp"/>
+                            <constraint firstAttribute="trailing" secondItem="CSJ-V4-0AD" secondAttribute="trailing" constant="18" id="8RM-QQ-dof"/>
+                            <constraint firstItem="D8T-pj-jZx" firstAttribute="top" secondItem="YOf-yZ-ZAl" secondAttribute="top" id="TPY-4j-4cD"/>
+                            <constraint firstAttribute="trailing" secondItem="D8T-pj-jZx" secondAttribute="trailing" id="Y1G-zE-XFv"/>
+                            <constraint firstItem="D8T-pj-jZx" firstAttribute="top" secondItem="8aZ-os-gfj" secondAttribute="bottom" id="ev2-gW-Mur"/>
+                            <constraint firstAttribute="centerX" secondItem="9it-j2-1a6" secondAttribute="centerX" id="tpi-SH-suO"/>
+                            <constraint firstItem="CSJ-V4-0AD" firstAttribute="leading" secondItem="YOf-yZ-ZAl" secondAttribute="leading" constant="18" id="vZQ-kI-LaV"/>
+                            <constraint firstItem="9it-j2-1a6" firstAttribute="top" secondItem="CSJ-V4-0AD" secondAttribute="bottom" constant="24" id="yiR-5o-Nqe"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ev2-gW-Mur"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="TpM-ns-Rtk"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="swipeView" destination="CSJ-V4-0AD" id="Jft-m0-6Tl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TqG-Zu-QKp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_like_normal" width="32" height="32"/>
+        <image name="btn_like_pressed" width="32" height="32"/>
+        <image name="btn_skip_normal" width="32" height="32"/>
+        <image name="btn_skip_pressed" width="32" height="32"/>
+        <image name="btn_undo" width="21" height="21"/>
+        <image name="ic_card_from_bg" width="21" height="21"/>
+    </resources>
+</document>

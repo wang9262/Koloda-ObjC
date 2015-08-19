@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49423115D7471550F45B3B9F /* libPods-Koloda-ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7118263EEACD2A89905893 /* libPods-Koloda-ObjC.a */; };
+		E3BBBFD71B84B78B00E4AB12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BBBFD61B84B78B00E4AB12 /* main.m */; };
+		E3BBBFF11B84B78B00E4AB12 /* Koloda_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BBBFF01B84B78B00E4AB12 /* Koloda_ObjCTests.m */; };
+		E3BBC0091B84B7C400E4AB12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BBBFFB1B84B7C400E4AB12 /* AppDelegate.m */; };
+		E3BBC00A1B84B7C400E4AB12 /* CustomOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BBBFFD1B84B7C400E4AB12 /* CustomOverlayView.m */; };
+		E3BBC00B1B84B7C400E4AB12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BBBFFE1B84B7C400E4AB12 /* Images.xcassets */; };
+		E3BBC00C1B84B7C400E4AB12 /* DraggableCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BBC0011B84B7C400E4AB12 /* DraggableCardView.m */; };
+		E3BBC00D1B84B7C400E4AB12 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BBC0031B84B7C400E4AB12 /* OverlayView.m */; };
+		E3BBC00E1B84B7C400E4AB12 /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BBC0051B84B7C400E4AB12 /* SwipeView.m */; };
+		E3BBC00F1B84B7C400E4AB12 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3BBC0061B84B7C400E4AB12 /* OverlayView.xib */; };
+		E3BBC0101B84B7C400E4AB12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BBC0081B84B7C400E4AB12 /* ViewController.m */; };
+		E3BBC0131B84B8B000E4AB12 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3BBC0111B84B8B000E4AB12 /* LaunchScreen.xib */; };
+		E3BBC0141B84B8B000E4AB12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BBC0121B84B8B000E4AB12 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3BBBFEB1B84B78B00E4AB12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3BBBFC91B84B78B00E4AB12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3BBBFD01B84B78B00E4AB12;
+			remoteInfo = "Koloda-ObjC";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		586F054390B198D14C7893FE /* Pods-Koloda-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koloda-ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Koloda-ObjC/Pods-Koloda-ObjC.release.xcconfig"; sourceTree = "<group>"; };
+		BA7118263EEACD2A89905893 /* libPods-Koloda-ObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Koloda-ObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3BBBFD11B84B78B00E4AB12 /* Koloda-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Koloda-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3BBBFD51B84B78B00E4AB12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3BBBFD61B84B78B00E4AB12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E3BBBFEA1B84B78B00E4AB12 /* Koloda-ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Koloda-ObjCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3BBBFEF1B84B78B00E4AB12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3BBBFF01B84B78B00E4AB12 /* Koloda_ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Koloda_ObjCTests.m; sourceTree = "<group>"; };
+		E3BBBFFA1B84B7C400E4AB12 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E3BBBFFB1B84B7C400E4AB12 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E3BBBFFC1B84B7C400E4AB12 /* CustomOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayView.h; sourceTree = "<group>"; };
+		E3BBBFFD1B84B7C400E4AB12 /* CustomOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayView.m; sourceTree = "<group>"; };
+		E3BBBFFE1B84B7C400E4AB12 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E3BBC0001B84B7C400E4AB12 /* DraggableCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableCardView.h; sourceTree = "<group>"; };
+		E3BBC0011B84B7C400E4AB12 /* DraggableCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableCardView.m; sourceTree = "<group>"; };
+		E3BBC0021B84B7C400E4AB12 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		E3BBC0031B84B7C400E4AB12 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		E3BBC0041B84B7C400E4AB12 /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
+		E3BBC0051B84B7C400E4AB12 /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
+		E3BBC0061B84B7C400E4AB12 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		E3BBC0071B84B7C400E4AB12 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E3BBC0081B84B7C400E4AB12 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E3BBC0111B84B8B000E4AB12 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		E3BBC0121B84B8B000E4AB12 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F5F70C0F02C7A100A9AC4B6B /* Pods-Koloda-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koloda-ObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Koloda-ObjC/Pods-Koloda-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E3BBBFCE1B84B78B00E4AB12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49423115D7471550F45B3B9F /* libPods-Koloda-ObjC.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3BBBFE71B84B78B00E4AB12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67B89A918625824EEA024AA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA7118263EEACD2A89905893 /* libPods-Koloda-ObjC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7EFCB5947276986F54CCA1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5F70C0F02C7A100A9AC4B6B /* Pods-Koloda-ObjC.debug.xcconfig */,
+				586F054390B198D14C7893FE /* Pods-Koloda-ObjC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E3BBBFC81B84B78B00E4AB12 = {
+			isa = PBXGroup;
+			children = (
+				E3BBBFD31B84B78B00E4AB12 /* Koloda-ObjC */,
+				E3BBBFED1B84B78B00E4AB12 /* Koloda-ObjCTests */,
+				E3BBBFD21B84B78B00E4AB12 /* Products */,
+				D7EFCB5947276986F54CCA1A /* Pods */,
+				67B89A918625824EEA024AA0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E3BBBFD21B84B78B00E4AB12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3BBBFD11B84B78B00E4AB12 /* Koloda-ObjC.app */,
+				E3BBBFEA1B84B78B00E4AB12 /* Koloda-ObjCTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3BBBFD31B84B78B00E4AB12 /* Koloda-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				E3BBBFFF1B84B7C400E4AB12 /* KolodaView */,
+				E3BBBFFA1B84B7C400E4AB12 /* AppDelegate.h */,
+				E3BBBFFB1B84B7C400E4AB12 /* AppDelegate.m */,
+				E3BBBFFC1B84B7C400E4AB12 /* CustomOverlayView.h */,
+				E3BBBFFD1B84B7C400E4AB12 /* CustomOverlayView.m */,
+				E3BBBFFE1B84B7C400E4AB12 /* Images.xcassets */,
+				E3BBC0071B84B7C400E4AB12 /* ViewController.h */,
+				E3BBC0081B84B7C400E4AB12 /* ViewController.m */,
+				E3BBBFD41B84B78B00E4AB12 /* Supporting Files */,
+			);
+			path = "Koloda-ObjC";
+			sourceTree = "<group>";
+		};
+		E3BBBFD41B84B78B00E4AB12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3BBC0111B84B8B000E4AB12 /* LaunchScreen.xib */,
+				E3BBC0121B84B8B000E4AB12 /* Main.storyboard */,
+				E3BBC0061B84B7C400E4AB12 /* OverlayView.xib */,
+				E3BBBFD51B84B78B00E4AB12 /* Info.plist */,
+				E3BBBFD61B84B78B00E4AB12 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3BBBFED1B84B78B00E4AB12 /* Koloda-ObjCTests */ = {
+			isa = PBXGroup;
+			children = (
+				E3BBBFF01B84B78B00E4AB12 /* Koloda_ObjCTests.m */,
+				E3BBBFEE1B84B78B00E4AB12 /* Supporting Files */,
+			);
+			path = "Koloda-ObjCTests";
+			sourceTree = "<group>";
+		};
+		E3BBBFEE1B84B78B00E4AB12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3BBBFEF1B84B78B00E4AB12 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3BBBFFF1B84B7C400E4AB12 /* KolodaView */ = {
+			isa = PBXGroup;
+			children = (
+				E3BBC0001B84B7C400E4AB12 /* DraggableCardView.h */,
+				E3BBC0011B84B7C400E4AB12 /* DraggableCardView.m */,
+				E3BBC0021B84B7C400E4AB12 /* OverlayView.h */,
+				E3BBC0031B84B7C400E4AB12 /* OverlayView.m */,
+				E3BBC0041B84B7C400E4AB12 /* SwipeView.h */,
+				E3BBC0051B84B7C400E4AB12 /* SwipeView.m */,
+			);
+			path = KolodaView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E3BBBFD01B84B78B00E4AB12 /* Koloda-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3BBBFF41B84B78B00E4AB12 /* Build configuration list for PBXNativeTarget "Koloda-ObjC" */;
+			buildPhases = (
+				227EB9AF9E0A486FFCF8D0DA /* Check Pods Manifest.lock */,
+				E3BBBFCD1B84B78B00E4AB12 /* Sources */,
+				E3BBBFCE1B84B78B00E4AB12 /* Frameworks */,
+				E3BBBFCF1B84B78B00E4AB12 /* Resources */,
+				09C972C53C0D9472113FB309 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Koloda-ObjC";
+			productName = "Koloda-ObjC";
+			productReference = E3BBBFD11B84B78B00E4AB12 /* Koloda-ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E3BBBFE91B84B78B00E4AB12 /* Koloda-ObjCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3BBBFF71B84B78B00E4AB12 /* Build configuration list for PBXNativeTarget "Koloda-ObjCTests" */;
+			buildPhases = (
+				E3BBBFE61B84B78B00E4AB12 /* Sources */,
+				E3BBBFE71B84B78B00E4AB12 /* Frameworks */,
+				E3BBBFE81B84B78B00E4AB12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3BBBFEC1B84B78B00E4AB12 /* PBXTargetDependency */,
+			);
+			name = "Koloda-ObjCTests";
+			productName = "Koloda-ObjCTests";
+			productReference = E3BBBFEA1B84B78B00E4AB12 /* Koloda-ObjCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3BBBFC91B84B78B00E4AB12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Vong;
+				TargetAttributes = {
+					E3BBBFD01B84B78B00E4AB12 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					E3BBBFE91B84B78B00E4AB12 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = E3BBBFD01B84B78B00E4AB12;
+					};
+				};
+			};
+			buildConfigurationList = E3BBBFCC1B84B78B00E4AB12 /* Build configuration list for PBXProject "Koloda-ObjC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E3BBBFC81B84B78B00E4AB12;
+			productRefGroup = E3BBBFD21B84B78B00E4AB12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3BBBFD01B84B78B00E4AB12 /* Koloda-ObjC */,
+				E3BBBFE91B84B78B00E4AB12 /* Koloda-ObjCTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E3BBBFCF1B84B78B00E4AB12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3BBC00B1B84B7C400E4AB12 /* Images.xcassets in Resources */,
+				E3BBC0131B84B8B000E4AB12 /* LaunchScreen.xib in Resources */,
+				E3BBC00F1B84B7C400E4AB12 /* OverlayView.xib in Resources */,
+				E3BBC0141B84B8B000E4AB12 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3BBBFE81B84B78B00E4AB12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09C972C53C0D9472113FB309 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Koloda-ObjC/Pods-Koloda-ObjC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		227EB9AF9E0A486FFCF8D0DA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E3BBBFCD1B84B78B00E4AB12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3BBC0101B84B7C400E4AB12 /* ViewController.m in Sources */,
+				E3BBC00C1B84B7C400E4AB12 /* DraggableCardView.m in Sources */,
+				E3BBC00D1B84B7C400E4AB12 /* OverlayView.m in Sources */,
+				E3BBC0091B84B7C400E4AB12 /* AppDelegate.m in Sources */,
+				E3BBC00E1B84B7C400E4AB12 /* SwipeView.m in Sources */,
+				E3BBC00A1B84B7C400E4AB12 /* CustomOverlayView.m in Sources */,
+				E3BBBFD71B84B78B00E4AB12 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3BBBFE61B84B78B00E4AB12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3BBBFF11B84B78B00E4AB12 /* Koloda_ObjCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3BBBFEC1B84B78B00E4AB12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3BBBFD01B84B78B00E4AB12 /* Koloda-ObjC */;
+			targetProxy = E3BBBFEB1B84B78B00E4AB12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E3BBBFF21B84B78B00E4AB12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E3BBBFF31B84B78B00E4AB12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E3BBBFF51B84B78B00E4AB12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5F70C0F02C7A100A9AC4B6B /* Pods-Koloda-ObjC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Koloda-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E3BBBFF61B84B78B00E4AB12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 586F054390B198D14C7893FE /* Pods-Koloda-ObjC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Koloda-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E3BBBFF81B84B78B00E4AB12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Koloda-ObjCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Koloda-ObjC.app/Koloda-ObjC";
+			};
+			name = Debug;
+		};
+		E3BBBFF91B84B78B00E4AB12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Koloda-ObjCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Koloda-ObjC.app/Koloda-ObjC";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E3BBBFCC1B84B78B00E4AB12 /* Build configuration list for PBXProject "Koloda-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3BBBFF21B84B78B00E4AB12 /* Debug */,
+				E3BBBFF31B84B78B00E4AB12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3BBBFF41B84B78B00E4AB12 /* Build configuration list for PBXNativeTarget "Koloda-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3BBBFF51B84B78B00E4AB12 /* Debug */,
+				E3BBBFF61B84B78B00E4AB12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3BBBFF71B84B78B00E4AB12 /* Build configuration list for PBXNativeTarget "Koloda-ObjCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3BBBFF81B84B78B00E4AB12 /* Debug */,
+				E3BBBFF91B84B78B00E4AB12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E3BBBFC91B84B78B00E4AB12 /* Project object */;
+}
