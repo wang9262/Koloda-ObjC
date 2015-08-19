@@ -1,6 +1,8 @@
 #KolodaView-ObjC
 This is a Objective-C version of [KolodaView](https://github.com/Yalantis/Koloda).You can see more info at that page.
 
+[中文版](#中文)
+
 Thanks
 ------
 First of all,thanks to the great work of [Yalantis](https://github.com/Yalantis).Recently I have been work with the similar things,but mine is not so elegant.So I tried some tinder-like repositories,however they can't satisfy my demand.And then I found [KolodaView](https://github.com/Yalantis/Koloda),but it written in Swift, but my project was under ObjC,so I rewrite this using ObjC.
@@ -33,7 +35,7 @@ The SwipeView has the following properties:
 An object that supports the SwipeViewDataSource protocol and can provide views to populate the SwipeView.
 
 ```Objective
-	@property (nonatomic, weak) IBOutlet id<SwipeDelegate> delegate;
+@property (nonatomic, weak) IBOutlet id<SwipeDelegate> delegate;
 ```
 An object that supports the SwipeViewDelegate protocol and can respond to SwipeView events.
 
@@ -49,7 +51,7 @@ The index of front card in the SwipeView (read only).
 The count of cards in the SwipeView (read only). To set this, implement the `swipeViewNumberOfCards:` dataSource method. 
 
 ```Objective-C
-    @property (nonatomic, readonly) NSUInteger visibleCardsCount;
+@property (nonatomic, readonly) NSUInteger visibleCardsCount;
 ```
 The count of displayed cards in the SwipeView.
 	
@@ -64,12 +66,12 @@ The SwipeView class has the following methods:
 This reloads all SwipeView item views from the dataSource and refreshes the display.
 
 ```Objective-C
-	- (void)revertAction;
+- (void)revertAction;
 ```	
 Applies undo animation and decrement currentCardNumber.
 
 ```Objective-C
-	- (void)applyAppearAnimation;
+- (void)applyAppearAnimation;
 ```
 Applies appear animation.
 
@@ -148,6 +150,140 @@ This method is fired on koloda's layout and after swiping. If you return YES fro
 - (POPPropertyAnimation *)swipeViewBackgroundCardAnimation:(SwipeView *)swipeView;
 ```
 Return a pop frame animation to be applied to backround cards after swipe. This method is fired on swipping, when any cards are displayed. If you don't return frame animation, or return nil, the koloda will apply default animation.
+
+#<a id = "中文">中文</a>
+致谢
+----
+感谢[Yalantis](https://github.com/Yalantis)出了个这么屌的框架，由于之前也有在做类似的事情，也尝试了 GitHub 上一些类似 Tinder 的框架，但是封装的不够好，无法满足自己需求，而自己实现的有点生硬。恰巧看到[KolodaView](https://github.com/Yalantis/Koloda)，但是它是用`swift`写的，而自己的工程用的是`ObjC`，本来想通过头文件桥接方式，但是由于其引入了 pod不太好弄就直接按照这个思想写了个 `ObjC`版的。总的来说，我仅仅只是搬运工。
+
+SDK版本
+-----------------------------
+
+* 用的是 Xcode6.4，iOS8.4
+* 按道理来说 iOS6 以上都能用，只要 pop 支持的 SDK 版本都能用。未亲测，纯属 YY，如果您有测试，请告诉我以下
+
+ARC
+------------------
+
+必须使用 ARC
+
+ 一些属性
+--------------
+
+属性如下：
+
+```Objective-C
+//用来填充 SwipeView 的数据源协议
+@property (nonatomic, weak) IBOutlet id<SwipeViewDataSource> dataSource;
+```
+
+```Objective
+//用来响应 UI 事件的代理
+@property (nonatomic, weak) IBOutlet id<SwipeDelegate> delegate;
+```
+
+```Objective-C
+//最前的卡片的 index（只读）
+@property (nonatomic, readonly) NSUInteger currentCardNum;
+```
+
+```Objective-C
+//SwipeView 的卡片数目（只读），可通过实现数据源中的swipeViewNumberOfCards:方法来设置
+@property (nonatomic, readonly) NSUInteger cardsCount;
+``` 
+
+```Objective-C
+//当前可见卡片数
+@property (nonatomic, readonly) NSUInteger visibleCardsCount;
+```
+	
+一些方法
+--------------
+
+
+```Objective-C
+//重新加载，类似 TableView
+	- (void)reloadData;
+```
+
+```Objective-C
+//撤销动画，同时减少currentCardNumber
+- (void)revertAction;
+```
+
+```Objective-C
+//显示动画
+- (void)applyAppearAnimation;
+```
+
+```Objective-C
+- (void)swipeLeft;
+```
+
+```Objective-C
+- (void)swipeRight;
+```
+
+```Objective-C
+//计算处于 index 位置的卡片 frame
+- (CGRect)frameForCardAtIndex:(NSUInteger)index;
+```
+
+协议
+---------------
+使用类似 TableView 的数据源驱动、带代理方法的方式。可通过 XIB/Storyboard/代码来设置
+
+SwipeViewDataSource 数据源方法（必须实现）
+
+```Objective-C
+- (NSUInteger)swipeViewNumberOfCards:(SwipeView *)swipeView;
+```
+
+
+```Objective-C
+- (UIView *)swipeView:(SwipeView *)swipeView
+          cardAtIndex:(NSUInteger)index;
+```
+
+```Objective-C
+- (OverlayView *)swipeView:(SwipeView *)swipeView
+        cardOverlayAtIndex:(NSUInteger)index;
+```
+
+SwipeViewDelegate代理方法 
+
+```Objective-C    
+ - (void)swipeView:(SwipeView *)swipeView didSwipeCardAtIndex:(NSUInteger)index inDirection:(SwipeDirection)direction;
+```
+
+```Objective-C
+- (void)swipeViewDidRunOutOfCards:(SwipeView *)swipeView;
+```
+
+```Objective-C
+- (void)swipeView:(SwipeView *)swipeView didSelectCardAtIndex:(NSUInteger)index;
+```
+
+```Objective-C
+- (BOOL)swipeViewShouldApplyAppearAnimation:(SwipeView *)swipeView;
+```
+
+```Objective-C
+- (BOOL)swipeViewShouldMoveBackgroundCard:(SwipeView *)swipeView;
+```
+
+```Objective-C
+- (BOOL)swipeViewShouldTransparentizeNextCard:(SwipeView *)swipeView;
+```
+
+```Objective-C
+- (POPPropertyAnimation *)swipeViewBackgroundCardAnimation:(SwipeView *)swipeView;
+```
+
+待办
+----
+- [ ] 高度自定义化
+- [ ] 翻译其官方的讲解该框架细节的两篇博客
 
 License
 ----------------
