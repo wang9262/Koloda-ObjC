@@ -15,12 +15,12 @@
 
 @interface SwipeView : UIView
 
-@property (nonatomic, weak) id<SwipeDelegate> delegate;
-@property (nonatomic, weak) id<SwipeViewDataSource> dataSource;
-@property (nonatomic, assign) CGFloat alphaValueOpaque;
-@property (nonatomic, assign) CGFloat alphaValueTransparent;
-@property (nonatomic, assign) CGFloat alphaValueSemiTransparent;
-@property (nonatomic, assign) NSUInteger visibleCardsCount;
+@property (nonatomic, weak) IBOutlet id<SwipeDelegate> delegate;
+@property (nonatomic, weak) IBOutlet id<SwipeViewDataSource> dataSource;
+
+@property (nonatomic, readonly) NSUInteger visibleCardsCount;
+@property (nonatomic, readonly) NSUInteger cardsCount;
+@property (nonatomic, readonly) NSUInteger currentCardNum;
 
 - (CGRect)frameForCardAtIndex:(NSUInteger)index;
 - (void)reloadData;

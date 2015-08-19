@@ -38,9 +38,11 @@ static CGFloat const kDefaultAlphaValueSemiTransparent            = 0.7;
 
 @property (nonatomic, assign) CGPoint appearScaleAnimationFromValue;
 @property (nonatomic, assign) CGPoint appearScaleAnimationToValue;
+@property (nonatomic, assign) CGFloat alphaValueOpaque;
+@property (nonatomic, assign) CGFloat alphaValueTransparent;
+@property (nonatomic, assign) CGFloat alphaValueSemiTransparent;
 
-
-
+@property (nonatomic, assign) NSUInteger visibleCardsCount;
 @property (nonatomic, assign) NSUInteger cardsCount;
 @property (nonatomic, assign) NSUInteger currentCardNum;
 
