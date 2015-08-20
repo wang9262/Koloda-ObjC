@@ -61,7 +61,7 @@ Methods
 The SwipeView class has the following methods:
 
 ```Objective-C
-	- (void)reloadData;
+- (void)reloadData;
 ```
 This reloads all SwipeView item views from the dataSource and refreshes the display.
 
@@ -86,8 +86,7 @@ Applies swipe left animation and action, increment currentCardNumber.
 Applies swipe right animation and action, increment currentCardNumber.
 
 ```Objective-C
-- (CGRect)frameForCardAtIndex:(NSUInteger)index;
- 
+- (CGRect)frameForCardAtIndex:(NSUInteger)index; 
 ```
 Calculates frames for cards. Useful for overriding. See example to learn more about it.
 
@@ -152,6 +151,11 @@ This method is fired on koloda's layout and after swiping. If you return YES fro
 Return a pop frame animation to be applied to backround cards after swipe. This method is fired on swipping, when any cards are displayed. If you don't return frame animation, or return nil, the koloda will apply default animation.
 
 #<a id = "中文">中文</a>
+
+说明
+----
+现在这个框架[KolodaView](https://github.com/Yalantis/Koloda)已经支持 Objective-C 了，详见这个[issue](https://github.com/Yalantis/Koloda/issues/4)。所以如果想紧跟这个项目更新的话，可以尝试使用原框架。这边会继续维护，然后添加一些后续的自定义功能，敬请期待！Have Fun！
+
 致谢
 ----
 感谢[Yalantis](https://github.com/Yalantis)出了个这么屌的框架，由于之前也有在做类似的事情，也尝试了 GitHub 上一些类似 Tinder 的框架，但是封装的不够好，无法满足自己需求，而自己实现的有点生硬。恰巧看到[KolodaView](https://github.com/Yalantis/Koloda)，但是它是用`swift`写的，而自己的工程用的是`ObjC`，本来想通过头文件桥接方式，但是由于其引入了 pod不太好弄就直接按照这个思想写了个 `ObjC`版的。总的来说，我仅仅只是搬运工。
@@ -203,7 +207,7 @@ ARC
 
 ```Objective-C
 //重新加载，类似 TableView
-	- (void)reloadData;
+- (void)reloadData;
 ```
 
 ```Objective-C
@@ -253,7 +257,7 @@ SwipeViewDataSource 数据源方法（必须实现）
 SwipeViewDelegate代理方法 
 
 ```Objective-C    
- - (void)swipeView:(SwipeView *)swipeView didSwipeCardAtIndex:(NSUInteger)index inDirection:(SwipeDirection)direction;
+- (void)swipeView:(SwipeView *)swipeView didSwipeCardAtIndex:(NSUInteger)index inDirection:(SwipeDirection)direction;
 ```
 
 ```Objective-C
@@ -290,7 +294,7 @@ License
 
     The MIT License (MIT)
 
-    Copyright © 2015 Yalantis
+    Copyright © 2015 Vong
 
     Permission is hereby granted free of charge to any person obtaining a copy of this software and associated documentation files (the "Software") to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
