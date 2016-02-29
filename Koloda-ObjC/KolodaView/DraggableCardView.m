@@ -99,6 +99,7 @@ static const CGFloat kCardResetAnimationDuration         = 0.2;
         }
         [UIView animateWithDuration:kCardResetAnimationDuration delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
             self.center = finishPoint;
+            self.transform = CGAffineTransformMakeRotation(-M_PI_4);
         } completion:^(BOOL finished) {
             self.dragBegin = NO;
             [self removeFromSuperview];
