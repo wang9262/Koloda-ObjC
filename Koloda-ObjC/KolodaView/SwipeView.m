@@ -15,6 +15,8 @@ static CGFloat const  kBackgroundCardsLeftMargin                  = 8.0;
 static NSUInteger const kDefaultCountOfVisibleCards               = 3;
 
 static NSTimeInterval const kBackgroundCardFrameAnimationDuration = 0.2;
+static CGFloat const kAppearScaleAnimationFromValue               = 0.1;
+static CGFloat const kAppearScaleAnimationToValue                 = 1.0;
 static NSTimeInterval const kAppearScaleAnimationDuration         = 0.8;
 static NSString *const kAppearScaleAnimationName                  = @"AppearScaleAnimation";
 
@@ -80,8 +82,8 @@ static CGFloat const kDefaultAlphaValueSemiTransparent            = 0.7;
 
 - (void)commonInit
 {
-    self.appearScaleAnimationFromValue = CGPointMake(.1f, .1f);
-    self.appearScaleAnimationToValue = CGPointMake(1.f, 1.f);
+    self.appearScaleAnimationFromValue = CGPointMake(kAppearScaleAnimationFromValue, kAppearScaleAnimationFromValue);
+    self.appearScaleAnimationToValue = CGPointMake(kAppearScaleAnimationToValue, kAppearScaleAnimationToValue);
     self.alphaValueOpaque = kDefaultAlphaValueOpaque;
     self.alphaValueTransparent = kDefaultAlphaValueTransparent;
     self.alphaValueSemiTransparent = kDefaultAlphaValueSemiTransparent;
@@ -303,22 +305,22 @@ static CGFloat const kDefaultAlphaValueSemiTransparent            = 0.7;
         
         NSUInteger countOfNeededCards = MIN(self.visibleCardsCount, self.cardsCount - self.currentCardNum);
         
-        for (NSInteger index = 0; index < countOfNeededCards; index++) {
+        for (NSUInteger index = self.currentCardNum; index < self.currentCardNum + countOfNeededCards; index++) {
             UIView *contentView = [self.dataSource swipeView:self cardAtIndex:index];
             if (contentView) {
                 DraggableCardView *nextCardView = [[DraggableCardView alloc] initWithFrame:[self frameForCardAtIndex:index]];
                 nextCardView.delegate = self;
-                nextCardView.alpha = index == 0 ? self.alphaValueOpaque : self.alphaValueSemiTransparent;
-                nextCardView.userInteractionEnabled = index == 0;
+                nextCardView.alpha = index == self.currentCardNum ? self.alphaValueOpaque : self.alphaValueSemiTransparent;
+                nextCardView.userInteractionEnabled = index == self.currentCardNum;
                 
                 OverlayView *overlayView = [self.dataSource swipeView:self cardOverlayAtIndex:index];
                 [nextCardView configWithContentView:contentView overlayView:overlayView];
                 [self.visibleCardsViewArray addObject:nextCardView];
-                if (index == 0) {
+                if (index == self.currentCardNum) {
                     [self addSubview:nextCardView];
                 }
                 else {
-                    [self insertSubview:nextCardView belowSubview:self.visibleCardsViewArray[index - 1]];
+                    [self insertSubview:nextCardView belowSubview:self.visibleCardsViewArray[index - self.currentCardNum - 1]];
                 }
             }
         }
@@ -417,7 +419,7 @@ static CGFloat const kDefaultAlphaValueSemiTransparent            = 0.7;
         }
     }
     
-    if (self.visibleCardsViewArray.count > 1) {
+    if (self.visibleCardsViewArray.count > 0) {
         for (NSUInteger index = 0; index < self.visibleCardsViewArray.count; index++) {
             POPPropertyAnimation *frameAnimation = nil;
             DraggableCardView *currentCard = self.visibleCardsViewArray[index];
