@@ -275,7 +275,7 @@ static CGFloat const kDefaultAlphaValueSemiTransparent            = 0.7;
             frameAnimation.duration = kBackgroundCardFrameAnimationDuration;
             currentCard.alpha = self.alphaValueSemiTransparent;
             frameAnimation.toValue = [NSValue valueWithCGRect:[self frameForCardAtIndex:index]];
-            currentCard.userInteractionEnabled = NO;
+            currentCard.userInteractionEnabled = index == 0;
             [currentCard pop_addAnimation:frameAnimation forKey:@"frameAnimation"];
         }
     }
