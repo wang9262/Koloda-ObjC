@@ -10,7 +10,10 @@ First of all,thanks to the great work of [Yalantis](https://github.com/Yalantis)
 TODO
 -----
 - [ ] More Customizable
-- [x] Translate this two articles which explain more details about how this framework works.1.[如何创建一个类似 Tinder 的交互动画[译]](http://vonglo.me/2015/08/21/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%B1%BB%E4%BC%BC%20Tinder%20%E7%9A%84%E4%BA%A4%E4%BA%92%E5%8A%A8%E7%94%BB/) 2.[Koloda动画第二版[译]](http://vonglo.me/2015/08/23/Koloda%E5%8A%A8%E7%94%BB%E7%AC%AC%E4%BA%8C%E7%89%88/)
+- [x] Translate this two articles which explain more details about how this framework works.
+    1.[如何创建一个类似 Tinder 的交互动画[译]](http://t.cn/RtrBvtD) 
+    
+    2.[Koloda动画第二版[译]](http://t.cn/Rtk5WSu)
 
 Supported OS & SDK Versions
 -----------------------------
@@ -287,7 +290,9 @@ SwipeViewDelegate代理方法
 待办
 ----
 - [ ] 高度自定义化
-- [x] 翻译其官方的讲解该框架细节的两篇博客 1.[如何创建一个类似 Tinder 的交互动画[译]](http://vonglo.me/2015/08/21/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%B1%BB%E4%BC%BC%20Tinder%20%E7%9A%84%E4%BA%A4%E4%BA%92%E5%8A%A8%E7%94%BB/) 2.[Koloda动画第二版[译]](http://vonglo.me/2015/08/23/Koloda%E5%8A%A8%E7%94%BB%E7%AC%AC%E4%BA%8C%E7%89%88/)
+- [x] 翻译其官方的讲解该框架细节的两篇博客
+    1.[如何创建一个类似 Tinder 的交互动画[译]](http://t.cn/RtrBvtD) 
+    2.[Koloda动画第二版[译]](http://t.cn/Rtk5WSu)
 
 License
 ----------------
