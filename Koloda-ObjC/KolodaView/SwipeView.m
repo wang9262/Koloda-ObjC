@@ -410,7 +410,6 @@ static CGFloat const kDefaultAlphaValueSemiTransparent            = 0.7;
             OverlayView *lastCardOverlayView = [self.dataSource swipeView:self cardOverlayAtIndex:shownCardsCount - 1];
             CGRect lastCardFrame = [self frameForCardAtIndex:self.currentCardNum + self.visibleCardsViewArray.count];
             DraggableCardView *lastCardView = [[DraggableCardView alloc] initWithFrame:lastCardFrame];
-            lastCardView.hidden = YES;
             lastCardView.userInteractionEnabled = YES;
             [lastCardView configWithContentView:lastCardContentView overlayView:lastCardOverlayView];
             lastCardView.delegate = self;

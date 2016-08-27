@@ -340,10 +340,8 @@ static const CGFloat kCardResetAnimationDuration         = 0.2;
         self.transform = CGAffineTransformMakeRotation(0);
         self.overlayView.alpha = 0;
         [self layoutIfNeeded];
-        return;
     } completion:^(BOOL finished) {
         self.transform = CGAffineTransformIdentity;
-        return;
     }];
 }
 
