@@ -11,6 +11,7 @@ TODO
 -----
 - [ ] More Customizable
 - [x] Translate this two articles which explain more details about how this framework works.
+
     1.[如何创建一个类似 Tinder 的交互动画[译]](http://t.cn/RtrBvtD) 
     
     2.[Koloda动画第二版[译]](http://t.cn/Rtk5WSu)
@@ -291,6 +292,7 @@ SwipeViewDelegate代理方法
 ----
 - [ ] 高度自定义化
 - [x] 翻译其官方的讲解该框架细节的两篇博客
+
     1.[如何创建一个类似 Tinder 的交互动画[译]](http://t.cn/RtrBvtD) 
     2.[Koloda动画第二版[译]](http://t.cn/Rtk5WSu)
 
